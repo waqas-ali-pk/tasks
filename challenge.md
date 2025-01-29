@@ -24,6 +24,8 @@ virtualenv venv
 pip install virtualenv
 ```
 
+<i><b>Note</b>: Python 3.10.7 is used for this project, you can use same or higher python version.</i>
+
 ## Activate virtual environment.
 
 Activate following command in shell, to activate virtual environment.

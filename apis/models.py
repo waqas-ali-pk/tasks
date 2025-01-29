@@ -14,7 +14,7 @@ class Label(models.Model):
 
     class Meta:
         constraints = [
-            UniqueConstraint(fields=('name', 'owner'), name='unique_label'),
+            UniqueConstraint(fields=("name", "owner"), name="unique_label"),
         ]
 
 
@@ -23,7 +23,7 @@ class Task(models.Model):
     description = models.TextField(blank=True, null=True)
     completion_status = models.BooleanField(default=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    label = models.ManyToManyField(Label, related_name='task', through='TaskLabel')
+    label = models.ManyToManyField(Label, related_name="task", through="TaskLabel")
 
     def __str__(self):
         return self.title
